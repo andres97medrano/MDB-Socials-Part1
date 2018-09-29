@@ -17,7 +17,11 @@ class FeedViewController: UIViewController
     var mdbImageView : UIImageView!
     
     // BUTTONS
-    var logoutButton : UIButton!
+
+    
+    // BAR BUTTON
+    var logoutBarButton : UIBarButtonItem!
+    var createPostBarButton : UIBarButtonItem!
 
     // TABLE VIEW
     var FeedTableView : UITableView!
@@ -38,6 +42,7 @@ class FeedViewController: UIViewController
 
         setupNavigationBar()
         displayLogoutButton()
+        displayCreatePostButton()
         createFeedView()
     }
     
@@ -46,4 +51,13 @@ class FeedViewController: UIViewController
         self.dismiss(animated: false, completion: nil)
     }
     
+    @objc func createPostButtonClicked() {
+        performSegue(withIdentifier: "toNewSocialScreen", sender: self)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return .lightContent
+        }
+    }
 }

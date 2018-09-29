@@ -11,6 +11,7 @@
 		252290A1215DDAB400666051 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252290A0215DDAB400666051 /* FeedTableViewCell.swift */; };
 		252290A9215F320300666051 /* UIHelperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252290A8215F320300666051 /* UIHelperExtension.swift */; };
 		252290AB215F33C600666051 /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252290AA215F33C600666051 /* RoundedWhiteButton.swift */; };
+		252290AD215F710F00666051 /* DetailVC-Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252290AC215F710F00666051 /* DetailVC-Setup.swift */; };
 		25230CCF2156F50C00E52FBC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CCE2156F50C00E52FBC /* SignUpViewController.swift */; };
 		25230CD12156F52600E52FBC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CD02156F52600E52FBC /* FeedViewController.swift */; };
 		25230CD32156F55E00E52FBC /* NewSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CD22156F55E00E52FBC /* NewSocialViewController.swift */; };
@@ -54,6 +55,7 @@
 		252290A0215DDAB400666051 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		252290A8215F320300666051 /* UIHelperExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelperExtension.swift; sourceTree = "<group>"; };
 		252290AA215F33C600666051 /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
+		252290AC215F710F00666051 /* DetailVC-Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailVC-Setup.swift"; sourceTree = "<group>"; };
 		25230CCE2156F50C00E52FBC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		25230CD02156F52600E52FBC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		25230CD22156F55E00E52FBC /* NewSocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				25230CD42156F57D00E52FBC /* DetailViewController.swift */,
+				252290AC215F710F00666051 /* DetailVC-Setup.swift */,
 			);
 			path = "Detail VC";
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				252290A1215DDAB400666051 /* FeedTableViewCell.swift in Sources */,
 				25230CE0215718AC00E52FBC /* CustomNavigationController.swift in Sources */,
 				25230CD52156F57D00E52FBC /* DetailViewController.swift in Sources */,
+				252290AD215F710F00666051 /* DetailVC-Setup.swift in Sources */,
 				25230CDA2156FCDE00E52FBC /* SignUpVC-Setup.swift in Sources */,
 				25230CD12156F52600E52FBC /* FeedViewController.swift in Sources */,
 				252290AB215F33C600666051 /* RoundedWhiteButton.swift in Sources */,

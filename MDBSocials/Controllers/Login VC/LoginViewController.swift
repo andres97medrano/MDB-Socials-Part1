@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController
 {
@@ -21,7 +22,7 @@ class LoginViewController: UIViewController
     
     // BUTTONS
     var loginButton : RoundedWhiteButton!
-    
+    var returnButton : UIButton! 
     
  
     // ===========================================================================================
@@ -37,20 +38,30 @@ class LoginViewController: UIViewController
         displayUsernameField()
         displayPasswordField()
         displayLoginButton()
+        displayReturnButton()
         addFieldListeners()
         
     }
     
-    override func viewWillAppear(_ animated: Bool)
-    {
+    @objc func loginButtonClicked() {
         
+        guard let username = usernameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        // signing in with email right now instead of password until I send the username to firebase
+        Auth.auth().signIn(withEmail: username, password: password) { user, error in
+            if error == nil && user != nil {
+                self.dismiss(animated: false, completion: nil)
+            } else {
+                print("ERROR: \(error!.localizedDescription)")
+                self.displayAlert(title: "Error", message: error!.localizedDescription)
+            }
+            
+        }
     }
     
-    @objc func loginButtonClicked()
-    {
-        // CHECK IF USER HAS VALID USERNAME/PASSWORD
+    @objc func returnButtonClicked() {
         self.dismiss(animated: false, completion: nil)
-        performSegue(withIdentifier: "toFeedScreenFromLogin", sender: self)
     }
     
     @objc func textFieldChanged(_ target:UITextField) {
@@ -60,10 +71,10 @@ class LoginViewController: UIViewController
         setLoginButton(enabled: formFilled)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        // data to send
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return .lightContent
+        }
     }
-
 }
 

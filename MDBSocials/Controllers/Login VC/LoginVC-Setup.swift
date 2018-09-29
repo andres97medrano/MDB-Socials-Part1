@@ -12,9 +12,7 @@ extension LoginViewController : UITextFieldDelegate
 {
     func displaySubtitle()
     {
-        // SUBTITLE
         loginLabel = UILabel(frame: CGRect(x: view.frame.width / 8, y: 1.25 * view.frame.height / 10 , width: view.frame.width, height: 50))
-        // signupLabel.textAlignment = .center
         loginLabel.text = "LOG IN"
         loginLabel.textColor = UIColor.white
         loginLabel.font = UIFont.boldSystemFont(ofSize: 30)
@@ -23,7 +21,6 @@ extension LoginViewController : UITextFieldDelegate
 
     func displayUsernameField()
     {
-        // USERNAME FIELD
         usernameTextField = UITextField(frame: CGRect(x: view.frame.width / 8, y: 4 * view.frame.height / 10, width: 6 * view.frame.width / 8, height: 40))
         usernameTextField.placeholder = "Username"
         let spacerView1 = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
@@ -35,7 +32,7 @@ extension LoginViewController : UITextFieldDelegate
     
     func displayPasswordField()
     {
-        // PASSWORD FIELD
+        
         passwordTextField = UITextField(frame: CGRect(x: view.frame.width / 8, y: 5 * view.frame.height / 10, width: 6 * view.frame.width / 8, height: 40))
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
@@ -48,13 +45,6 @@ extension LoginViewController : UITextFieldDelegate
 
     func displayLoginButton()
     {
-        // LOGIN BUTTON
-//        loginButton = UIButton(frame: CGRect(x: 0, y: 7.75 * view.frame.height / 10, width: view.frame.width, height: 50))
-//        loginButton.setTitle("LOG IN", for: .normal)
-//        loginButton.backgroundColor = .red
-//        loginButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
-//        self.view.addSubview(loginButton)
-        
         loginButton = RoundedWhiteButton(frame: CGRect(x: view.center.x / 2, y: 7.75 * view.frame.height / 10, width: 200, height: 50))
         loginButton.setTitleColor(secondaryColor, for: .normal)
         loginButton.setTitle("Log In", for: .normal)
@@ -67,8 +57,29 @@ extension LoginViewController : UITextFieldDelegate
         setLoginButton(enabled: false)
     }
     
-    func addFieldListeners()
+//    logoutButton = UIButton(frame: CGRect(x: 0, y: view.frame.height / 10, width: view.frame.width, height: 50))
+//    logoutButton.setTitle("LOG OUT", for: .normal)
+//    logoutButton.backgroundColor = .red
+//    logoutButton.addTarget(self, action: #selector(logoutButtonClicked), for: .touchUpInside)
+//    view.addSubview(logoutButton)
+    
+//    mdbImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 175, height: 175))
+//    mdbImageView.center = CGPoint(x: view.frame.width / 2, y: 2.5 * view.frame.height / 10)
+//    mdbImageView.image = UIImage(named: "mdblogo")
+//    mdbImageView.contentMode = .scaleAspectFit
+//    self.view.addSubview(mdbImageView)
+    
+    func displayReturnButton()
     {
+        returnButton = UIButton(type: .custom)
+        returnButton = UIButton(frame: CGRect(x: 10, y: 30, width: 40, height: 40))
+        returnButton.setImage(UIImage(named: "backIcon"), for: .normal)
+        returnButton.addTarget(self, action: #selector(returnButtonClicked), for: .touchUpInside)
+        view.addSubview(returnButton)
+        
+    }
+    
+    func addFieldListeners() {
         
         usernameTextField.delegate = self
         passwordTextField.delegate = self
@@ -76,6 +87,15 @@ extension LoginViewController : UITextFieldDelegate
         usernameTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
 
+    }
+    
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
 
     func setLoginButton(enabled:Bool) {
@@ -87,7 +107,6 @@ extension LoginViewController : UITextFieldDelegate
             loginButton.isEnabled = false
         }
     }
-    
 
 
 }

@@ -16,6 +16,7 @@ class DetailViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
     }
     
     override func didReceiveMemoryWarning()
@@ -24,5 +25,9 @@ class DetailViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return .lightContent
+        }
+    }
 }

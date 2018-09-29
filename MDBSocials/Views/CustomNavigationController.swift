@@ -17,11 +17,5 @@ class CustomNavigationController: UINavigationController {
         self.navigationBar.shadowImage = UIImage()
         self.navigationBar.barTintColor = UIColor.white
     }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        get {
-            return .lightContent
-        }
-    }
 
 }

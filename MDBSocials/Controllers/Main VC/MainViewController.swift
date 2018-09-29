@@ -38,7 +38,8 @@ class MainViewController : UIViewController
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if Auth.auth().currentUser != nil
+        
+        if let user = Auth.auth().currentUser
         {
             performSegue(withIdentifier: "toFeedScreen", sender: self)
         }
@@ -55,5 +56,10 @@ class MainViewController : UIViewController
         performSegue(withIdentifier: "toSignUpScreen", sender: self)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return .lightContent
+        }
+    }
     
 }

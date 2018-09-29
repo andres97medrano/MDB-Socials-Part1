@@ -21,6 +21,7 @@ class SignUpViewController: UIViewController
     
     // BUTTONS
     var signupButton : RoundedWhiteButton!
+    var returnButton : UIButton!
     
     // LABELS
     var signupLabel : UILabel!
@@ -42,13 +43,13 @@ class SignUpViewController: UIViewController
         displayEmailField()
         displayPasswordField()
         displaySignupButton()
+        displayReturnButton()
         addFieldListeners()
         
         
     }
     
-    override func viewWillAppear(_ animated: Bool)
-    {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         fullnameTextField.becomeFirstResponder()
@@ -69,6 +70,7 @@ class SignUpViewController: UIViewController
             }
             else {
                 print("ERROR CREATING USER: \(String(describing: error?.localizedDescription))")
+                self.displayAlert(title: "Error", message: String(describing: error?.localizedDescription))
             }
         }
         self.dismiss(animated: false, completion: nil)
@@ -92,5 +94,15 @@ class SignUpViewController: UIViewController
         
         let formFilled = fullName != nil && fullName != "" && username != nil && username != "" && email != nil && email != "" && password != nil && password != ""
         setSignupButton(enabled: formFilled)
+    }
+    
+    @objc func returnButtonClicked() {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return .lightContent
+        }
     }
 }

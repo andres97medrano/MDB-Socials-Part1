@@ -19,16 +19,22 @@ extension FeedViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func displayLogoutButton() {
-        logoutButton = UIButton(frame: CGRect(x: 0, y: view.frame.height / 10, width: view.frame.width, height: 50))
-        logoutButton.setTitle("LOG OUT", for: .normal)
-        logoutButton.backgroundColor = .red
-        logoutButton.addTarget(self, action: #selector(logoutButtonClicked), for: .touchUpInside)
-        view.addSubview(logoutButton)
+
+        logoutBarButton = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutButtonClicked))
+        logoutBarButton.tintColor = UIColor.white
+        self.navigationItem.leftBarButtonItem = logoutBarButton
+    }
+    
+    func displayCreatePostButton() {
+        createPostBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createPostButtonClicked))
+        createPostBarButton.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = createPostBarButton
+        
     }
     
     func createFeedView()
     {
-        FeedTableView = UITableView(frame: CGRect(x: view.frame.width / 12, y: view.frame.height / 5, width: 10 * view.frame.width / 12, height: 3.5 * view.frame.height / 5))
+        FeedTableView = UITableView(frame: CGRect(x: view.frame.width / 12, y: view.frame.height / 14, width: 10 * view.frame.width / 12, height: 4 * view.frame.height / 5))
         FeedTableView.delegate = self
         FeedTableView.dataSource = self
         FeedTableView.register(FeedTableViewCell.self, forCellReuseIdentifier: "TVcell")
@@ -39,9 +45,9 @@ extension FeedViewController : UITableViewDelegate, UITableViewDataSource {
     func setupNavigationBar()
     {
         navigationItem.title = "Socials"
-        navigationController?.navigationBar.barTintColor = UIColor.black
+        navigationController?.navigationBar.barTintColor = secondaryColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)]
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
 
     }
 

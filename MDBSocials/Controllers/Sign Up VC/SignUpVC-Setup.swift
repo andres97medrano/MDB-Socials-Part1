@@ -10,8 +10,7 @@ import UIKit
 
 extension SignUpViewController : UITextFieldDelegate
 {
-    func displaySubtitle()
-    {
+    func displaySubtitle() {
         // SUBTITLE
         signupLabel = UILabel(frame: CGRect(x: view.frame.width / 8, y: 1.25 * view.frame.height / 10 , width: view.frame.width, height: 50))
         signupLabel.text = "SIGN UP"
@@ -20,8 +19,7 @@ extension SignUpViewController : UITextFieldDelegate
         self.view.addSubview(signupLabel)
     }
 
-    func displayFullNameField()
-    {
+    func displayFullNameField() {
         // FULL NAME FIELD
         fullnameTextField = UITextField(frame: CGRect(x: view.frame.width / 8, y: 2.5 * view.frame.height / 10, width: 6 * view.frame.width / 8, height: 40))
         fullnameTextField.placeholder = "Full Name"
@@ -32,8 +30,7 @@ extension SignUpViewController : UITextFieldDelegate
         view.addSubview(fullnameTextField)
     }
 
-    func displayUsernameField()
-    {
+    func displayUsernameField() {
         // USERNAME FIELD
         usernameTextField = UITextField(frame: CGRect(x: view.frame.width / 8, y: 4 * view.frame.height / 10, width: 6 * view.frame.width / 8, height: 40))
         usernameTextField.placeholder = "Username"
@@ -44,8 +41,7 @@ extension SignUpViewController : UITextFieldDelegate
         view.addSubview(usernameTextField)
     }
     
-    func displayEmailField()
-    {
+    func displayEmailField() {
         // EMAIL FIELD
         emailTextField = UITextField(frame: CGRect(x: view.frame.width / 8, y: 5.5 * view.frame.height / 10, width: 6 * view.frame.width / 8, height: 40))
         emailTextField.placeholder = "Email"
@@ -56,8 +52,7 @@ extension SignUpViewController : UITextFieldDelegate
         view.addSubview(emailTextField)
     }
 
-    func displayPasswordField()
-    {
+    func displayPasswordField() {
         // PASSWORD FIELD
         passwordTextField = UITextField(frame: CGRect(x: view.frame.width / 8, y: 7 * view.frame.height / 10, width: 6 * view.frame.width / 8, height: 40))
         passwordTextField.placeholder = "Password"
@@ -69,8 +64,7 @@ extension SignUpViewController : UITextFieldDelegate
         view.addSubview(passwordTextField)
     }
 
-    func displaySignupButton()
-    {
+    func displaySignupButton() {
         
         signupButton = RoundedWhiteButton(frame: CGRect(x: view.center.x / 2, y: 8.35 * view.frame.height / 10, width: 200, height: 50))
         signupButton.setTitleColor(secondaryColor, for: .normal)
@@ -85,6 +79,15 @@ extension SignUpViewController : UITextFieldDelegate
         
     }
     
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(defaultAction)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     func setSignupButton(enabled:Bool) {
         if enabled {
             signupButton.alpha = 1.0
@@ -93,6 +96,16 @@ extension SignUpViewController : UITextFieldDelegate
             signupButton.alpha = 0.5
             signupButton.isEnabled = false
         }
+    }
+    
+    func displayReturnButton()
+    {
+        returnButton = UIButton(type: .custom)
+        returnButton = UIButton(frame: CGRect(x: 10, y: 30, width: 40, height: 40))
+        returnButton.setImage(UIImage(named: "backIcon"), for: .normal)
+        returnButton.addTarget(self, action: #selector(returnButtonClicked), for: .touchUpInside)
+        view.addSubview(returnButton)
+        
     }
     
     func addFieldListeners()

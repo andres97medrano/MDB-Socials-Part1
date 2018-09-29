@@ -32,12 +32,6 @@ extension MainViewController
     
     func displayLoginButton()
     {
-//        // LOGIN BUTTON
-//        loginButton = UIButton(frame: CGRect(x: 0, y: 5 * view.frame.height / 10, width: view.frame.width, height: 50))
-//        loginButton.setTitle("LOG IN", for: .normal)
-//        loginButton.backgroundColor = .red
-//        loginButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
-//        self.view.addSubview(loginButton)
         
         loginButton = RoundedWhiteButton(frame: CGRect(x: view.center.x / 2, y: 6.5 * view.frame.height / 10, width: 200, height: 50))
         loginButton.setTitleColor(secondaryColor, for: .normal)
@@ -53,13 +47,6 @@ extension MainViewController
     
     func displaySignupButton()
     {
-        // SIGN-UP BUTTON
-        //                                    x: v.f.w / 4                            w: v.f.w. / 2
-//        signupButton = UIButton(frame: CGRect(x: 0, y: 6 * view.frame.height / 10, width: view.frame.width, height: 50))
-//        signupButton.setTitle("SIGN UP", for: .normal)
-//        signupButton.backgroundColor = .red
-//        signupButton.addTarget(self, action: #selector(signupButtonClicked), for: .touchUpInside)
-//        view.addSubview(signupButton)
 
         signupButton = RoundedWhiteButton(frame: CGRect(x: view.center.x / 2, y: 7.5 * view.frame.height / 10, width: 200, height: 50))
         signupButton.setTitleColor(secondaryColor, for: .normal)
