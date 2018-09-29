@@ -8,9 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1A6C8056AE7DC565C4376177 /* Pods_MDBSocialsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A4E3E8EF60DA8342371DB3 /* Pods_MDBSocialsUITests.framework */; };
+		252290A1215DDAB400666051 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252290A0215DDAB400666051 /* FeedTableViewCell.swift */; };
+		252290A9215F320300666051 /* UIHelperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252290A8215F320300666051 /* UIHelperExtension.swift */; };
+		252290AB215F33C600666051 /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252290AA215F33C600666051 /* RoundedWhiteButton.swift */; };
+		25230CCF2156F50C00E52FBC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CCE2156F50C00E52FBC /* SignUpViewController.swift */; };
+		25230CD12156F52600E52FBC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CD02156F52600E52FBC /* FeedViewController.swift */; };
+		25230CD32156F55E00E52FBC /* NewSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CD22156F55E00E52FBC /* NewSocialViewController.swift */; };
+		25230CD52156F57D00E52FBC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CD42156F57D00E52FBC /* DetailViewController.swift */; };
+		25230CD82156FCBF00E52FBC /* LoginVC-Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CD72156FCBF00E52FBC /* LoginVC-Setup.swift */; };
+		25230CDA2156FCDE00E52FBC /* SignUpVC-Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CD92156FCDE00E52FBC /* SignUpVC-Setup.swift */; };
+		25230CE0215718AC00E52FBC /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CDF215718AC00E52FBC /* CustomNavigationController.swift */; };
+		25230CE22157242200E52FBC /* FeedVC-Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CE12157242200E52FBC /* FeedVC-Setup.swift */; };
+		25230CEC215807B600E52FBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25230CEB215807B600E52FBC /* Main.storyboard */; };
+		25230CEE215807FC00E52FBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CED215807FC00E52FBC /* MainViewController.swift */; };
+		25230CF02158085400E52FBC /* MainVC-Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25230CEF2158085400E52FBC /* MainVC-Setup.swift */; };
 		25A4EF9021558F8A00A63DC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4EF8F21558F8A00A63DC1 /* AppDelegate.swift */; };
-		25A4EF9221558F8A00A63DC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4EF9121558F8A00A63DC1 /* ViewController.swift */; };
-		25A4EF9521558F8B00A63DC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A4EF9321558F8B00A63DC1 /* Main.storyboard */; };
+		25A4EF9221558F8A00A63DC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4EF9121558F8A00A63DC1 /* LoginViewController.swift */; };
 		25A4EF9721558F8C00A63DC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A4EF9621558F8C00A63DC1 /* Assets.xcassets */; };
 		25A4EF9A21558F8C00A63DC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25A4EF9821558F8C00A63DC1 /* LaunchScreen.storyboard */; };
 		25A4EFA521558F8D00A63DC1 /* MDBSocialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A4EFA421558F8D00A63DC1 /* MDBSocialsTests.swift */; };
@@ -38,10 +51,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		252290A0215DDAB400666051 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		252290A8215F320300666051 /* UIHelperExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelperExtension.swift; sourceTree = "<group>"; };
+		252290AA215F33C600666051 /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
+		25230CCE2156F50C00E52FBC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		25230CD02156F52600E52FBC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		25230CD22156F55E00E52FBC /* NewSocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSocialViewController.swift; sourceTree = "<group>"; };
+		25230CD42156F57D00E52FBC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		25230CD72156FCBF00E52FBC /* LoginVC-Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC-Setup.swift"; sourceTree = "<group>"; };
+		25230CD92156FCDE00E52FBC /* SignUpVC-Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC-Setup.swift"; sourceTree = "<group>"; };
+		25230CDF215718AC00E52FBC /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		25230CE12157242200E52FBC /* FeedVC-Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC-Setup.swift"; sourceTree = "<group>"; };
+		25230CEB215807B600E52FBC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		25230CED215807FC00E52FBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		25230CEF2158085400E52FBC /* MainVC-Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC-Setup.swift"; sourceTree = "<group>"; };
 		25A4EF8C21558F8A00A63DC1 /* MDBSocials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDBSocials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A4EF8F21558F8A00A63DC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25A4EF9121558F8A00A63DC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		25A4EF9421558F8B00A63DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25A4EF9121558F8A00A63DC1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25A4EF9621558F8C00A63DC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25A4EF9921558F8C00A63DC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25A4EF9B21558F8C00A63DC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +130,98 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		252290A2215DE59D00666051 /* Main VC */ = {
+			isa = PBXGroup;
+			children = (
+				25230CED215807FC00E52FBC /* MainViewController.swift */,
+				25230CEF2158085400E52FBC /* MainVC-Setup.swift */,
+			);
+			path = "Main VC";
+			sourceTree = "<group>";
+		};
+		252290A3215DE5B900666051 /* Login VC */ = {
+			isa = PBXGroup;
+			children = (
+				25A4EF9121558F8A00A63DC1 /* LoginViewController.swift */,
+				25230CD72156FCBF00E52FBC /* LoginVC-Setup.swift */,
+			);
+			path = "Login VC";
+			sourceTree = "<group>";
+		};
+		252290A4215DE5C800666051 /* Sign Up VC */ = {
+			isa = PBXGroup;
+			children = (
+				25230CCE2156F50C00E52FBC /* SignUpViewController.swift */,
+				25230CD92156FCDE00E52FBC /* SignUpVC-Setup.swift */,
+			);
+			path = "Sign Up VC";
+			sourceTree = "<group>";
+		};
+		252290A5215DE5EE00666051 /* Feed VC */ = {
+			isa = PBXGroup;
+			children = (
+				25230CD02156F52600E52FBC /* FeedViewController.swift */,
+				25230CE12157242200E52FBC /* FeedVC-Setup.swift */,
+			);
+			path = "Feed VC";
+			sourceTree = "<group>";
+		};
+		252290A6215DE5FE00666051 /* New Social VC */ = {
+			isa = PBXGroup;
+			children = (
+				25230CD22156F55E00E52FBC /* NewSocialViewController.swift */,
+			);
+			path = "New Social VC";
+			sourceTree = "<group>";
+		};
+		252290A7215DE61200666051 /* Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				25230CD42156F57D00E52FBC /* DetailViewController.swift */,
+			);
+			path = "Detail VC";
+			sourceTree = "<group>";
+		};
+		25230CC82156F3D500E52FBC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		25230CC92156F3F600E52FBC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				252290A0215DDAB400666051 /* FeedTableViewCell.swift */,
+				252290AA215F33C600666051 /* RoundedWhiteButton.swift */,
+				25230CDF215718AC00E52FBC /* CustomNavigationController.swift */,
+				252290A8215F320300666051 /* UIHelperExtension.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		25230CCA2156F3FD00E52FBC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				252290A2215DE59D00666051 /* Main VC */,
+				252290A4215DE5C800666051 /* Sign Up VC */,
+				252290A5215DE5EE00666051 /* Feed VC */,
+				252290A3215DE5B900666051 /* Login VC */,
+				252290A7215DE61200666051 /* Detail VC */,
+				252290A6215DE5FE00666051 /* New Social VC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		25230CCB2156F43500E52FBC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				25A4EF9821558F8C00A63DC1 /* LaunchScreen.storyboard */,
+				25230CEB215807B600E52FBC /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		25A4EF8321558F8A00A63DC1 = {
 			isa = PBXGroup;
 			children = (
@@ -130,10 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				25A4EF8F21558F8A00A63DC1 /* AppDelegate.swift */,
-				25A4EF9121558F8A00A63DC1 /* ViewController.swift */,
-				25A4EF9321558F8B00A63DC1 /* Main.storyboard */,
+				25230CC82156F3D500E52FBC /* Models */,
+				25230CC92156F3F600E52FBC /* Views */,
+				25230CCA2156F3FD00E52FBC /* Controllers */,
+				25230CCB2156F43500E52FBC /* Storyboards */,
 				25A4EF9621558F8C00A63DC1 /* Assets.xcassets */,
-				25A4EF9821558F8C00A63DC1 /* LaunchScreen.storyboard */,
 				25A4EF9B21558F8C00A63DC1 /* Info.plist */,
 				25A4EFBD2155978F00A63DC1 /* GoogleService-Info.plist */,
 			);
@@ -279,7 +398,7 @@
 				25A4EF9A21558F8C00A63DC1 /* LaunchScreen.storyboard in Resources */,
 				25A4EFBE2155978F00A63DC1 /* GoogleService-Info.plist in Resources */,
 				25A4EF9721558F8C00A63DC1 /* Assets.xcassets in Resources */,
-				25A4EF9521558F8B00A63DC1 /* Main.storyboard in Resources */,
+				25230CEC215807B600E52FBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +442,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MDBSocials/Pods-MDBSocials-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -333,8 +450,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -389,7 +504,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25A4EF9221558F8A00A63DC1 /* ViewController.swift in Sources */,
+				25230CCF2156F50C00E52FBC /* SignUpViewController.swift in Sources */,
+				252290A9215F320300666051 /* UIHelperExtension.swift in Sources */,
+				25230CEE215807FC00E52FBC /* MainViewController.swift in Sources */,
+				25230CD32156F55E00E52FBC /* NewSocialViewController.swift in Sources */,
+				25230CE22157242200E52FBC /* FeedVC-Setup.swift in Sources */,
+				25A4EF9221558F8A00A63DC1 /* LoginViewController.swift in Sources */,
+				252290A1215DDAB400666051 /* FeedTableViewCell.swift in Sources */,
+				25230CE0215718AC00E52FBC /* CustomNavigationController.swift in Sources */,
+				25230CD52156F57D00E52FBC /* DetailViewController.swift in Sources */,
+				25230CDA2156FCDE00E52FBC /* SignUpVC-Setup.swift in Sources */,
+				25230CD12156F52600E52FBC /* FeedViewController.swift in Sources */,
+				252290AB215F33C600666051 /* RoundedWhiteButton.swift in Sources */,
+				25230CF02158085400E52FBC /* MainVC-Setup.swift in Sources */,
+				25230CD82156FCBF00E52FBC /* LoginVC-Setup.swift in Sources */,
 				25A4EF9021558F8A00A63DC1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,14 +554,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		25A4EF9321558F8B00A63DC1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				25A4EF9421558F8B00A63DC1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		25A4EF9821558F8C00A63DC1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

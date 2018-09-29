@@ -9,6 +9,11 @@
 import UIKit
 import Firebase
 
+// let primaryColor = UIColor(red: 210/255, green: 109/255, blue: 180/255, alpha: 1) // pink
+// let primaryColor = UIColor(red: 255/255, green: 237/255, blue: 49/255, alpha: 1) // yellow
+let primaryColor = UIColor(red: 255/255, green: 107/255, blue: 16/255, alpha: 1) // orange
+let secondaryColor = UIColor(red: 52/255, green: 148/255, blue: 230/255, alpha: 1) // blue
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
