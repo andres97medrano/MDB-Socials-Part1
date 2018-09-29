@@ -26,7 +26,7 @@ class FeedViewController: UIViewController
     
     // ARRAYS
     // We need to create an array with all the possible Pokemons searched based on the filters
-    var testArray = ["Party Tonight", "Soccer Sesh", "Movie Night", "Pizza @ Cory"]   // using this array to test the table view cell
+    var testArray = ["Party Tonight", "Soccer Sesh", "Movie Night", "Free Pizza @ Cory 400"]   // using this array to test the table view cell
     // ===========================================================================================
     
     
@@ -34,8 +34,8 @@ class FeedViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.orange
-        // displayMDBLogo()
+        self.view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+
         setupNavigationBar()
         displayLogoutButton()
         createFeedView()

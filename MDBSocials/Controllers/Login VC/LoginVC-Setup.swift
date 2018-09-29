@@ -67,6 +67,16 @@ extension LoginViewController : UITextFieldDelegate
         setLoginButton(enabled: false)
     }
     
+    func addFieldListeners()
+    {
+        
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        usernameTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+
+    }
 
     func setLoginButton(enabled:Bool) {
         if enabled {

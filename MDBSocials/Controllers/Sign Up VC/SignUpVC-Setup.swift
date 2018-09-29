@@ -8,13 +8,12 @@
 
 import UIKit
 
-extension SignUpViewController 
+extension SignUpViewController : UITextFieldDelegate
 {
     func displaySubtitle()
     {
         // SUBTITLE
         signupLabel = UILabel(frame: CGRect(x: view.frame.width / 8, y: 1.25 * view.frame.height / 10 , width: view.frame.width, height: 50))
-        // signupLabel.textAlignment = .center
         signupLabel.text = "SIGN UP"
         signupLabel.textColor = UIColor.white
         signupLabel.font = UIFont.boldSystemFont(ofSize: 30)
@@ -72,13 +71,6 @@ extension SignUpViewController
 
     func displaySignupButton()
     {
-        // SIGN-UP BUTTON
-        //                                    x: v.f.w / 4                            w: v.f.w. / 2
-//        signupButton = UIButton(frame: CGRect(x: 0, y: 8.35 * view.frame.height / 10, width: view.frame.width, height: 50))
-//        signupButton.setTitle("SIGN UP", for: .normal)
-//        signupButton.backgroundColor = .red
-//        signupButton.addTarget(self, action: #selector(signupButtonClicked), for: .touchUpInside)
-//        view.addSubview(signupButton)
         
         signupButton = RoundedWhiteButton(frame: CGRect(x: view.center.x / 2, y: 8.35 * view.frame.height / 10, width: 200, height: 50))
         signupButton.setTitleColor(secondaryColor, for: .normal)
@@ -93,7 +85,6 @@ extension SignUpViewController
         
     }
     
-    
     func setSignupButton(enabled:Bool) {
         if enabled {
             signupButton.alpha = 1.0
@@ -102,6 +93,21 @@ extension SignUpViewController
             signupButton.alpha = 0.5
             signupButton.isEnabled = false
         }
+    }
+    
+    func addFieldListeners()
+    {
+        
+        fullnameTextField.delegate = self
+        emailTextField.delegate = self
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        fullnameTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        usernameTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        
     }
 
     

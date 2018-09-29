@@ -37,6 +37,8 @@ class LoginViewController: UIViewController
         displayUsernameField()
         displayPasswordField()
         displayLoginButton()
+        addFieldListeners()
+        
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -48,7 +50,7 @@ class LoginViewController: UIViewController
     {
         // CHECK IF USER HAS VALID USERNAME/PASSWORD
         self.dismiss(animated: false, completion: nil)
-        // performSegue(withIdentifier: "toFeedScreenFromLogin", sender: self)
+        performSegue(withIdentifier: "toFeedScreenFromLogin", sender: self)
     }
     
     @objc func textFieldChanged(_ target:UITextField) {

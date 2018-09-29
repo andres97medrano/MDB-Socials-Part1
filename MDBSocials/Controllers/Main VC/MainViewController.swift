@@ -29,7 +29,6 @@ class MainViewController : UIViewController
     {
         super.viewDidLoad()
         
-        // self.view.backgroundColor = UIColor.blue
         self.view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         displayMDBLogo()
         displaySubtitle()

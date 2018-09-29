@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class SignUpViewController: UIViewController, UITextFieldDelegate
+class SignUpViewController: UIViewController
 {
     // ===================================== USER-INTERFACE =====================================
     
@@ -29,11 +29,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate
     var mdbImageView : UIImageView!
     
     
-//    // passwordTextField.delegate = self
-//
-//    emailTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-//    passwordTextField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-    
     // ===========================================================================================
     
     override func viewDidLoad() {
@@ -47,15 +42,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate
         displayEmailField()
         displayPasswordField()
         displaySignupButton()
+        addFieldListeners()
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool)
     {
+        super.viewWillAppear(animated)
+        
+        fullnameTextField.becomeFirstResponder()
+//        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
     
     @objc func signupButtonClicked() {
-        guard let fullName = fullnameTextField.text else { return }
-        guard let username = usernameTextField.text else { return }
+        guard fullnameTextField.text != nil else { return }
+        guard usernameTextField.text != nil else { return }
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
@@ -72,6 +74,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate
         self.dismiss(animated: false, completion: nil)
 
         }
+    
+//    @objc func keyboardWillAppear(notification: NSNotification){
+//        
+//        let info = notification.userInfo!
+//        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+//        
+//        signupButton.center = CGPoint(x: view.center.x,
+//                                        y: view.frame.height - keyboardFrame.height - 16.0 - signupButton.frame.height / 2)
+//    }
     
     @objc func textFieldChanged(_ target:UITextField) {
         let fullName = fullnameTextField.text
